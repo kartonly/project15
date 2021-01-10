@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   MyWorker,
   MyWorkersDatabase,
@@ -16,6 +16,7 @@ export class AppComponent {
   title = 'Список сотрудников';
   workers: MyWorker[]=[];
   myWorkerType = MyWorkerType;
+  @Input() searchworker: string;
   constructor(private WorkersserService: WorkersserService){}
   ngOnInit() {
     this.getData();

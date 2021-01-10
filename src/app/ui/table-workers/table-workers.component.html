@@ -12,8 +12,8 @@
             <th scope="col" [style.width]="'15%'"></th>
           </tr>
         </thead>
-        <tbody>
-          <tr *ngFor="let worker of workers">
+        <tbody >
+          <tr *ngFor="let worker of workers | myfilter : searchworker">
             <th scope="row">{{ worker.id }}</th>
             <td>{{ worker.name }}</td>
             <td>{{ worker.surname }}</td>
